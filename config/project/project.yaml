@@ -1,0 +1,17 @@
+dateModified: 1613685511
+email:
+  fromEmail: vladgrichan@gmail.com
+  fromName: 'Craft Practice 0'
+  transportType: craft\mail\transportadapters\Sendmail
+system:
+  edition: solo
+  live: true
+  name: 'Craft Practice 0'
+  schemaVersion: 3.6.4
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

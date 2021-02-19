@@ -8,15 +8,29 @@
 		<link rel="stylesheet" href="{{ siteUrl }}assets/style.css">
 	</head>
 	<body>
-		<img src="{{ siteUrl }}assets/images/placeholder.com-logo3.jpg" height="50px" width="200px" alt="">
 
-		<h1>Hi</h1>
+		<header>
+			<nav>
+				<img src="{{ siteUrl }}assets/images/placeholder.com-logo3.jpg" height="50px" width="200px" alt="">
+				{% set slug = craft.app.request.getSegment(1) %}
+				{# <h1> #}
+				{# {{ slug }} #}
+				{# </h1> #}
+					<div class="nav-right"> {% for link in header.navigation %}
 
-		{{ entry.richText}}
+						{% set destination = link.linkDestination.one() %}
+						<a href="{{ destination.url }}" class="nav-link {% if slug == destination.slug %}nav-link-active{% endif %}">{{ link.linkText }}</a>
+					{% endfor %}
+				</div>
+			</nav>
+		</header>
+		{% block content %}{% endblock %}
+
+
+		<footer class="">
+			{{ footer.richText }}
+		</footer>
 
 		<script src="{{ siteUrl }}assets/script.js"></script>
-
-		<img src="{{ entry.featureImage.one().getUrl('medium') }}" alt="">
-
 	</body>
 </html>

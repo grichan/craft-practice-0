@@ -1,11 +1,11 @@
 enableVersioning: true
-handle: home
-name: Home
+handle: contact
+name: Contact
 propagationMethod: all
 siteSettings:
   c6b2525d-d476-492f-b4da-609636e13a7e:
     enabledByDefault: true
     hasUrls: true
-    template: home
-    uriFormat: __home__
+    template: general
+    uriFormat: contact
 type: single

@@ -1,8 +1,13 @@
-dateModified: 1613685511
+dateModified: 1613734472
 email:
   fromEmail: vladgrichan@gmail.com
   fromName: 'Craft Practice 0'
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true

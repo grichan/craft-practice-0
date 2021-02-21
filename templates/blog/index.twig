@@ -1,0 +1,17 @@
+{% extends "index" %}
+
+{% block content %}
+
+    <h1>Blog</h1>
+    <p>Welcome to the blog </p>
+    {% set posts = craft.entries.section("blogPosts").all() %}
+    
+
+    {% for post in posts %}
+        <h2> {{post.title}} </h2>
+        {{ post.richText|striptags|slice(0, 100) }}...
+        <p>
+            <a href="{{ post.url }}">Read more</a>
+        </p>
+    {% endfor %}
+{% endblock %}
